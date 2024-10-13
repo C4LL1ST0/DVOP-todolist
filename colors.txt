@@ -1,0 +1,4 @@
+primary: #257180
+sec: #F2E5BF
+trin: #FD8B51
+quad: #CB6040
