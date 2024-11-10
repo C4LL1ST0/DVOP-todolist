@@ -1,7 +1,10 @@
 import { useState } from "react";
-import Event, { IEvent } from "./Event";
+import { IEvent } from "./Event";
 
-export default function Adder(props: { setEventList: any }) {
+export default function Adder(props: {
+  setEventList: any;
+  createF(event: IEvent): void;
+}) {
   const [heading, setHeading] = useState<string>("");
   const [goal, setGoal] = useState<string>("");
 
@@ -10,12 +13,13 @@ export default function Adder(props: { setEventList: any }) {
       const newEvent: IEvent = {
         heading: heading,
         goal: goal,
-        setEventList: props.setEventList
+        done: false,
       };
       props.setEventList((prevEventList: IEvent[]) => [
         ...prevEventList,
         newEvent,
       ]);
+      props.createF(newEvent);
 
       setHeading("");
       setGoal("");
