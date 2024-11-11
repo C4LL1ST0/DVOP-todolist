@@ -33,7 +33,7 @@ export default function App() {
   }, []);
 
   const createF = async (event: IEvent) => {
-    const { data, error } = await supabase.from("todolist").insert(event);
+    const { error } = await supabase.from("todolist").insert(event);
 
     if (error) {
       console.error("Error inserting event:", error.message);
@@ -41,7 +41,7 @@ export default function App() {
   };
 
   const deleteF = async (heading: string, goal: string) => {
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from("todolist")
       .delete()
       .eq("heading", heading)
@@ -53,7 +53,7 @@ export default function App() {
   };
 
   const updateF = async (heading: string, goal: string) => {
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from("todolist")
       .update({ done: true })
       .eq("heading", heading)
