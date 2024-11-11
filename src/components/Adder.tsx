@@ -27,7 +27,7 @@ export default function Adder(props: {
   };
 
   return (
-    <div className="p-10 bg-[#257180] rounded-xl flex gap-5">
+    <div className="p-10 bg-[#257180] rounded-xl flex-col flex gap-5 md:flex-row">
       <input
         id="heading"
         type="text"

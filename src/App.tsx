@@ -68,7 +68,7 @@ export default function App() {
     <div className="w-full flex flex-col items-center gap-10">
       <h1 className="font-extrabold text-3xl m-5">TODOLIST</h1>
       <Adder setEventList={setEventsList} createF={createF} />
-      <div className="w-full flex items-start justify-evenly flex-col lg:flex-row">
+      <div className="w-full flex items-center justify-evenly flex-col lg:flex-row">
         <FragmentView
           inputArray={eventList.map((event) => {
             return (

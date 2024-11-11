@@ -32,7 +32,7 @@ export default function Event(props: {
 
   if (done) {
     return (
-      <div className="w-2/5 border-4 rounded-xl border-black bg-green-500">
+      <div className="w-2/5 min-w-20 border-4 rounded-xl border-black bg-green-500">
         <div className="p-3 flex flex-nowrap flex-col gap-3 items-start justify-evenly">
           <h2 className="text-2xl font-bold">{props.heading}</h2>
           <p className="">{props.goal}</p>
@@ -49,7 +49,7 @@ export default function Event(props: {
     );
   } else {
     return (
-      <div className="w-2/5 border-4 rounded-xl border-black bg-[#F2E5BF]">
+      <div className="w-2/5 min-w-40 border-4 rounded-xl border-black bg-[#F2E5BF]">
         <div className="p-3 flex flex-nowrap flex-col gap-3 items-start justify-evenly">
           <h2 className="text-2xl font-bold">{props.heading}</h2>
           <p className="">{props.goal}</p>
