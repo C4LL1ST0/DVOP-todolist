@@ -6,8 +6,8 @@ import { createClient } from "@supabase/supabase-js";
 
 export default function App() {
   const [eventList, setEventsList] = useState<IEvent[]>([]);
-  const key = import.meta.env.VITE_SUPABASE_KEY;
-  const url = import.meta.env.VITE_APP_SUPABASE_URL;
+  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdrbnBxeW1sanZrbGN5emJhbGNzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzA3MjU0MDMsImV4cCI6MjA0NjMwMTQwM30.w48obiVXAOKrX17pfgqENWupVNy8r-s_yn-B7yXl8X8";
+  const url = "https://gknpqymljvklcyzbalcs.supabase.co";
   if (!key) {
     throw new Error("Supabase key is missing");
   }
